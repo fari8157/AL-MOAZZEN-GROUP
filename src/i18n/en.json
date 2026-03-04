@@ -1,0 +1,26 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About Us",
+        "services": "Services",
+        "packages": "Packages",
+        "blog": "Blog",
+        "contact": "Contact Us",
+        "faq": "FAQ"
+    },
+    "hero": {
+        "title": "Experience the Sacred Journey with Excellence",
+        "subtitle": "Premium Umrah packages tailored for your spiritual comfort and peace of mind.",
+        "cta": "Explore Packages"
+    },
+    "common": {
+        "learnMore": "Learn More",
+        "bookNow": "Book Now",
+        "loading": "Loading...",
+        "success": "Success",
+        "error": "Error"
+    },
+    "footer": {
+        "copy": "© {{year}} AL-MOAZZEN GROUP. All rights reserved."
+    }
+}
