@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Section, Button } from '../components/ui';
 import { Hotel, Plane, Calendar, User } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
 const Packages = () => {
     const { t } = useTranslation();

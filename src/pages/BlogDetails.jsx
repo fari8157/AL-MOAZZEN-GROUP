@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Section, Button } from '../components/ui';
 import { blogPosts } from '../data/blogData';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../components/utils/SEO';
 import { motion } from 'framer-motion';
 
 const BlogDetails = () => {
@@ -21,14 +21,10 @@ const BlogDetails = () => {
 
     return (
         <div className="pt-10">
-            <Helmet>
-                <title>{content.title} | AL-MOAZZEN GROUP Blog</title>
-                <meta name="description" content={content.excerpt} />
-                <meta property="og:title" content={content.title} />
-                <meta property="og:description" content={content.excerpt} />
-                <meta property="og:image" content={post.image} />
-                <meta property="og:type" content="article" />
-            </Helmet>
+            <SEO
+                title={`${content.title} | AL-MOAZZEN GROUP Blog`}
+                description={content.excerpt}
+            />
 
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <Link

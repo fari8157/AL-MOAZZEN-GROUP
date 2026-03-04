@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { blogPosts } from '../data/blogData';
 import { Calendar, User, ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../components/utils/SEO';
 
 const Blog = () => {
     const { t, i18n } = useTranslation();
@@ -13,10 +13,10 @@ const Blog = () => {
 
     return (
         <div className="pt-10">
-            <Helmet>
-                <title>{t('blog.meta.title')}</title>
-                <meta name="description" content={t('blog.meta.desc')} />
-            </Helmet>
+            <SEO
+                title={t('blog.meta.title')}
+                description={t('blog.meta.desc')}
+            />
 
             <Section title={t('blog.title')} subtitle={t('blog.subtitle')}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

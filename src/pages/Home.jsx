@@ -3,17 +3,17 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { ArrowRight, Plane, Hotel, FileText, CheckCircle2, ShieldCheck, Headphones, Compass, MapPin, ClipboardList, BedDouble } from 'lucide-react';
 import { Button, Section } from '../components/ui';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from '../components/utils/SEO';
 
 const Home = () => {
     const { t } = useTranslation();
 
     return (
         <div className="overflow-hidden">
-            <Helmet>
-                <title>AL-MOAZZEN GROUP | Premium Umrah Travel Agency Jeddah</title>
-                <meta name="description" content="Experience a sacred and comfortable Umrah journey with AL-MOAZZEN GROUP. Premium packages from the heart of Jeddah, Saudi Arabia." />
-            </Helmet>
+            <SEO
+                title="AL-MOAZZEN GROUP | Premium Umrah Travel Agency Jeddah"
+                description="Experience a sacred and comfortable Umrah journey with AL-MOAZZEN GROUP. Premium packages from the heart of Jeddah, Saudi Arabia."
+            />
 
             {/* Hero Section */}
             <section className="relative h-[90vh] flex items-center pt-20">

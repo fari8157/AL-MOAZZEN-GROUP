@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Section, Button } from '../components/ui';
 import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
     const { t } = useTranslation();
