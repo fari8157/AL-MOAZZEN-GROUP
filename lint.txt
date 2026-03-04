@@ -1,0 +1,30 @@
+﻿
+C:\Users\User\Desktop\faris\travel-agency\src\components\layout\Footer.jsx
+  4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\layout\Navbar.jsx
+  5:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\ui\WhatsAppButton.jsx
+  4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\ui\index.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\pages\About.jsx
+  4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\pages\Blog.jsx
+  5:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\pages\BlogDetails.jsx
+  8:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\pages\FAQ.jsx
+  4:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\User\Desktop\faris\travel-agency\src\pages\Home.jsx
+  3:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Ô£û 9 problems (9 errors, 0 warnings)
+
