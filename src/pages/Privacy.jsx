@@ -1,17 +1,19 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Section } from '../components/ui';
 
 const Privacy = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="pt-20">
-            <Section title="Privacy Policy">
-                <div className="max-w-3xl mx-auto prose prose-gray">
-                    <p>Last updated: March 2026</p>
-                    <h2>Introduction</h2>
-                    <p>We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website.</p>
-                    <h2>Data We Collect</h2>
-                    <p>We may collect, use, store and transfer different kinds of personal data about you, including Identity Data (name), Contact Data (email, phone), and Technical Data (IP address, browser type).</p>
-                    {/* Add more legal text as needed */}
+            <Section title={t('legal.privacy.title')}>
+                <div className="max-w-3xl mx-auto prose prose-gray rtl:text-right">
+                    <p>{t('legal.privacy.updated')}</p>
+                    <h2>{t('legal.privacy.intro.title')}</h2>
+                    <p>{t('legal.privacy.intro.desc')}</p>
+                    <h2>{t('legal.privacy.data.title')}</h2>
+                    <p>{t('legal.privacy.data.desc')}</p>
                 </div>
             </Section>
         </div>

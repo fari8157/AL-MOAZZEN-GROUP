@@ -1,34 +1,37 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Section } from '../components/ui';
 import { ShieldCheck, Map, Clock, Users, Heart } from 'lucide-react';
 
 const Services = () => {
+    const { t } = useTranslation();
+
     const services = [
         {
             icon: <ShieldCheck size={32} />,
-            title: "Visa Processing",
-            desc: "Comprehensive visa assistance for pilgrims worldwide with fast turnaround times."
+            title: t('services.card1.title'),
+            desc: t('services.card1.desc')
         },
         {
             icon: <Map size={32} />,
-            title: "Guided Tours",
-            desc: "Ziyarat tours in Makkah and Madinah with knowledgeable multilingual guides."
+            title: t('services.card2.title'),
+            desc: t('services.card2.desc')
         },
         {
             icon: <Users size={32} />,
-            title: "Group Packages",
-            desc: "Coordinated travel for families and large groups with dedicated support staff."
+            title: t('services.card3.title'),
+            desc: t('services.card3.desc')
         },
         {
             icon: <Clock size={32} />,
-            title: "24/7 Support",
-            desc: "In-country support team available around the clock to assist with any needs."
+            title: t('services.card4.title'),
+            desc: t('services.card4.desc')
         }
     ];
 
     return (
         <div className="pt-10">
-            <Section title="Our Specialized Services" subtitle="Beyond packages, we provide everything needed for a complete spiritual journey.">
+            <Section title={t('services.title')} subtitle={t('services.subtitle')}>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((item, i) => (
                         <div key={i} className="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group">
@@ -45,11 +48,11 @@ const Services = () => {
             <Section className="bg-primary-50">
                 <div className="max-w-4xl mx-auto text-center">
                     <Heart className="mx-auto text-primary-500 mb-6" size={48} fill="currentColor" />
-                    <h2 className="text-3xl font-bold mb-6">Customized VIP Experiences</h2>
+                    <h2 className="text-3xl font-bold mb-6">{t('services.vipTitle')}</h2>
                     <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                        Looking for something tailored to your specific needs? We offer private transportation, luxury suite bookings, and personalized guidance for individuals and VIP groups.
+                        {t('services.vipDesc')}
                     </p>
-                    <button className="btn btn-primary px-8">Inquire Now</button>
+                    <button className="btn btn-primary px-8">{t('services.inquire')}</button>
                 </div>
             </Section>
         </div>

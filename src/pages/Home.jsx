@@ -34,12 +34,12 @@ const Home = () => {
                         className="max-w-2xl"
                     >
                         <span className="inline-block px-4 py-1.5 rounded-full bg-primary-100 text-primary-600 text-sm font-semibold mb-6">
-                            AL-MOAZZEN GROUP Official Agency in Jeddah
+                            {t('hero.agency')}
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-[1.1]">
+                        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-deep to-emerald-900 mb-6 leading-[1.1]">
                             {t('hero.title')}
                         </h1>
-                        <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                        <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl md:mx-0">
                             {t('hero.subtitle')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
@@ -68,7 +68,7 @@ const Home = () => {
                             viewport={{ once: true }}
                             className="text-4xl md:text-5xl font-bold text-emerald-deep mb-4"
                         >
-                            Why Choose AL-MOAZZEN GROUP?
+                            {t('home.whyChoose.title')}
                         </motion.h2>
                         <div className="gold-divider" />
                         <motion.p
@@ -76,9 +76,9 @@ const Home = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-gray-600 max-w-3xl mx-auto text-lg"
+                            className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed"
                         >
-                            Delivering a spiritually enriching and seamlessly managed Umrah experience with excellence, care, and dedication.
+                            {t('home.whyChoose.subtitle')}
                         </motion.p>
                     </div>
 
@@ -86,23 +86,23 @@ const Home = () => {
                         {[
                             {
                                 icon: <Plane className="text-gold-soft" size={32} />,
-                                title: "Seamless Travel Management",
-                                desc: "From flight booking to ground transportation, every detail is carefully arranged to ensure a smooth and stress-free journey."
+                                title: t('home.whyChoose.card1.title'),
+                                desc: t('home.whyChoose.card1.desc')
                             },
                             {
                                 icon: <Hotel className="text-gold-soft" size={32} />,
-                                title: "Premium Accommodation Near Al-Haram",
-                                desc: "Stay in carefully selected hotels within close proximity to Masjid Al-Haram for maximum comfort and convenience."
+                                title: t('home.whyChoose.card2.title'),
+                                desc: t('home.whyChoose.card2.desc')
                             },
                             {
                                 icon: <Compass className="text-gold-soft" size={32} />,
-                                title: "Expert Religious Guidance",
-                                desc: "Experienced guides assist you through every ritual of Umrah, ensuring clarity, confidence, and spiritual fulfillment."
+                                title: t('home.whyChoose.card3.title'),
+                                desc: t('home.whyChoose.card3.desc')
                             },
                             {
                                 icon: <Headphones className="text-gold-soft" size={32} />,
-                                title: "Dedicated 24/7 Support",
-                                desc: "Our support team remains available throughout your journey to provide assistance whenever needed."
+                                title: t('home.whyChoose.card4.title'),
+                                desc: t('home.whyChoose.card4.desc')
                             }
                         ].map((item, i) => (
                             <motion.div
@@ -116,7 +116,7 @@ const Home = () => {
                                 <div className="mb-6 p-4 bg-emerald-deep/5 rounded-2xl inline-block group-hover:scale-110 transition-transform duration-300">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-bold text-emerald-deep mb-4 leading-tight group-hover:text-gold-soft transition-colors">
+                                <h3 className="text-xl font-bold text-emerald-deep mb-4 leading-tight group-hover:text-gold-soft transition-colors min-h-[3.5rem] flex items-center">
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed">
@@ -147,33 +147,33 @@ const Home = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-5xl font-bold mb-4"
+                            className="text-4xl md:text-5xl font-bold text-white mb-4"
                         >
-                            Your Umrah Journey – Step by Step
+                            {t('home.umrahJourney.title')}
                         </motion.h2>
-                        <div className="h-1 w-24 bg-gold-soft mx-auto my-6" />
+                        <div className="gold-divider" />
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1 }}
-                            className="text-emerald-100/70 max-w-2xl mx-auto text-lg"
+                            className="text-emerald-100/70 max-w-2xl mx-auto text-lg leading-relaxed"
                         >
-                            A carefully guided process designed to let you focus entirely on your worship.
+                            {t('home.umrahJourney.subtitle')}
                         </motion.p>
                     </div>
 
                     {/* Timeline Desktop */}
                     <div className="hidden lg:block relative">
                         {/* Connecting Line */}
-                        <div className="" />
+                        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gold-soft/20 z-0" />
 
                         <div className="grid grid-cols-4 gap-4 relative">
                             {[
-                                { number: "01", icon: <ClipboardList />, title: "Select Your Package", desc: "Choose from our thoughtfully designed Umrah packages tailored to your comfort and schedule." },
-                                { number: "02", icon: <FileText />, title: "Visa & Documentation Processing", desc: "We handle all necessary documentation and visa procedures efficiently and professionally." },
-                                { number: "03", icon: <MapPin />, title: "Arrival & Hospitality in Jeddah", desc: "Enjoy VIP reception, smooth transfers, and comfortable hotel check-in near the Haram." },
-                                { number: "04", icon: <CheckCircle2 />, title: "Perform Umrah with Guidance", desc: "Complete your sacred rituals with the support of knowledgeable guides for a spiritually fulfilling experience." }
+                                { number: "01", icon: <ClipboardList />, title: t('home.umrahJourney.step1.title'), desc: t('home.umrahJourney.step1.desc') },
+                                { number: "02", icon: <FileText />, title: t('home.umrahJourney.step2.title'), desc: t('home.umrahJourney.step2.desc') },
+                                { number: "03", icon: <MapPin />, title: t('home.umrahJourney.step3.title'), desc: t('home.umrahJourney.step3.desc') },
+                                { number: "04", icon: <CheckCircle2 />, title: t('home.umrahJourney.step4.title'), desc: t('home.umrahJourney.step4.desc') }
                             ].map((item, i) => (
                                 <motion.div
                                     key={i}
@@ -184,7 +184,7 @@ const Home = () => {
                                     className="relative flex flex-col items-center text-center px-4"
                                 >
                                     <div className="w-16 h-16 rounded-full bg-emerald-900 border-2 border-gold-soft flex items-center justify-center text-gold-soft mb-8 relative z-20 group hover:shadow-[0_0_20px_rgba(198,167,94,0.4)] transition-all duration-300">
-                                        <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gold-soft text-emerald-deep text-xs font-bold flex items-center justify-center border-2 border-emerald-900">
+                                        <div className="absolute -top-3 -right-3 rtl:right-auto rtl:-left-3 w-8 h-8 rounded-full bg-gold-soft text-emerald-deep text-xs font-bold flex items-center justify-center border-2 border-emerald-deep">
                                             {item.number}
                                         </div>
                                         <div className="group-hover:scale-110 transition-transform duration-300">
@@ -197,36 +197,36 @@ const Home = () => {
                             ))}
                         </div>
                     </div>
+                </div>
 
-                    {/* Timeline Mobile */}
-                    <div className="lg:hidden space-y-12 relative px-4">
-                        <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gold-soft/20" />
+                {/* Timeline Mobile */}
+                <div className="lg:hidden space-y-12 relative px-4">
+                    <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gold-soft/20" />
 
-                        {[
-                            { number: "01", icon: <ClipboardList />, title: "Select Your Package", desc: "Choose from our thoughtfully designed Umrah packages tailored to your comfort and schedule." },
-                            { number: "02", icon: <FileText />, title: "Visa & Documentation Processing", desc: "We handle all documentation and visa procedures efficiently and professionally." },
-                            { number: "03", icon: <MapPin />, title: "Arrival & Hospitality in Jeddah", desc: "Enjoy VIP reception, smooth transfers, and comfortable hotel check-in near the Haram." },
-                            { number: "04", icon: <CheckCircle2 />, title: "Perform Umrah with Guidance", desc: "Complete your sacred rituals with the support of knowledgeable guides for a spiritually fulfilling experience." }
-                        ].map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className="relative flex items-start space-x-6 rtl:space-x-reverse"
-                            >
-                                <div className="w-12 h-12 shrink-0 rounded-full bg-emerald-900 border-2 border-gold-soft flex items-center justify-center text-gold-soft relative z-10">
-                                    {React.cloneElement(item.icon, { size: 20 })}
-                                </div>
-                                <div className="pt-2">
-                                    <span className="text-gold-soft/80 text-xs font-bold mb-1 block">Step {item.number}</span>
-                                    <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                                    <p className="text-emerald-100/60 text-sm leading-relaxed">{item.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                    {[
+                        { number: "01", icon: <ClipboardList />, title: t('home.umrahJourney.step1.title'), desc: t('home.umrahJourney.step1.desc') },
+                        { number: "02", icon: <FileText />, title: t('home.umrahJourney.step2.title'), desc: t('home.umrahJourney.step2.desc') },
+                        { number: "03", icon: <MapPin />, title: t('home.umrahJourney.step3.title'), desc: t('home.umrahJourney.step3.desc') },
+                        { number: "04", icon: <CheckCircle2 />, title: t('home.umrahJourney.step4.title'), desc: t('home.umrahJourney.step4.desc') }
+                    ].map((item, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                            className="relative flex items-start space-x-6 rtl:space-x-reverse"
+                        >
+                            <div className="w-12 h-12 shrink-0 rounded-full bg-emerald-900 border-2 border-gold-soft flex items-center justify-center text-gold-soft relative z-10">
+                                {React.cloneElement(item.icon, { size: 20 })}
+                            </div>
+                            <div className="pt-2 flex-1">
+                                <span className="text-gold-soft/80 text-xs font-bold mb-1 block uppercase tracking-wider">{t('nav.home')} {item.number}</span>
+                                <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                                <p className="text-emerald-100/60 text-sm leading-relaxed">{item.desc}</p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </section>
         </div>

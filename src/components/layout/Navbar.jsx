@@ -41,12 +41,12 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex items-center group rtl:space-x-reverse">
                         <img
-                            src="/logo.jpeg"
+                            src="/logo.png"
                             alt="AL-MOAZZEN GROUP"
                             className="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                         />
                         <span className={`text-xl font-bold tracking-tight hidden sm:block ms-3 ${isScrolled ? 'text-spiritual-charcoal' : 'text-gray-900'} transition-colors duration-300`}>
-                            AL-MOAZZEN<span className="text-primary-500"> GROUP</span>
+                            {t('nav.brand')}
                         </span>
                     </Link>
 

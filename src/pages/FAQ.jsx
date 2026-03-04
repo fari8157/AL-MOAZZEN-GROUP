@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Section } from '../components/ui';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
@@ -34,32 +35,34 @@ const FAQItem = ({ question, answer }) => {
 };
 
 const FAQ = () => {
+    const { t } = useTranslation();
+
     const faqs = [
         {
-            question: "When is the best time to perform Umrah?",
-            answer: "While Umrah can be performed year-round, many prefer the months of October to March when the weather in Saudi Arabia is milder. Ramadan is also a highly spiritual time, though it is much more crowded."
+            question: t('faq.q1'),
+            answer: t('faq.a1')
         },
         {
-            question: "How long does the Umrah visa process take?",
-            answer: "Typically, Umrah visas are processed within 3 to 7 working days. We recommend booking at least 2-3 weeks in advance to ensure all documentation is in order."
+            question: t('faq.q2'),
+            answer: t('faq.a2')
         },
         {
-            question: "Are flights included in the packages?",
-            answer: "Our Premium and VIP packages include return flights. Economy packages can be customized to include flights or can be 'land-only' if you prefer to book your own travel."
+            question: t('faq.q3'),
+            answer: t('faq.a3')
         },
         {
-            question: "Do you provide Ziyarat (Holy sites) tours?",
-            answer: "Yes, all our packages include guided tours of major historical and religious sites in both Makkah and Madinah."
+            question: t('faq.q4'),
+            answer: t('faq.a4')
         },
         {
-            question: "Is travel insurance necessary?",
-            answer: "Standard Saudi health insurance is often included with the visa fee, but we highly recommend additional comprehensive travel insurance for peace of mind."
+            question: t('faq.q5'),
+            answer: t('faq.a5')
         }
     ];
 
     return (
         <div className="pt-10">
-            <Section title="Frequently Asked Questions" subtitle="Find answers to common questions about our services and the Umrah journey.">
+            <Section title={t('faq.title')} subtitle={t('faq.subtitle')}>
                 <div className="max-w-3xl mx-auto bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                     {faqs.map((faq, i) => (
                         <FAQItem key={i} question={faq.question} answer={faq.answer} />

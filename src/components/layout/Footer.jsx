@@ -13,19 +13,19 @@ const Footer = () => {
 
     const footerSections = {
         services: [
-            "Economy Umrah Packages",
-            "Premium Umrah Packages",
-            "VIP & Private Services",
-            "Umrah Visa Processing",
-            "Hotel & Transport Arrangements"
+            t('home.whyChoose.card2.title'),
+            t('home.whyChoose.card1.title'),
+            t('footer.vip'),
+            t('footer.visa'),
+            t('footer.hotelTrans')
         ],
         links: [
             { label: t('nav.about'), path: "/about" },
-            { label: "Our Packages", path: "/packages" },
+            { label: t('nav.packages'), path: "/packages" },
             { label: t('nav.faq'), path: "/faq" },
-            { label: "Blog (SEO)", path: "/blog" },
-            { label: "Privacy Policy", path: "/privacy" },
-            { label: "Terms & Conditions", path: "/terms" }
+            { label: t('nav.blog'), path: "/blog" },
+            { label: t('footer.privacy'), path: "/privacy" },
+            { label: t('footer.terms'), path: "/terms" }
         ]
     };
 
@@ -70,7 +70,7 @@ const Footer = () => {
                             <div className="flex items-center gap-4">
                                 <div className="bg-white/95 p-2 rounded-xl border border-gold-premium/30 group-hover:shadow-[0_0_20px_rgba(200,162,77,0.3)] transition-all duration-300">
                                     <img
-                                        src="/logo.jpeg"
+                                        src="/logo.png"
                                         alt="AL-MOAZZEN GROUP"
                                         className="h-14 w-auto object-contain"
                                     />
@@ -80,14 +80,14 @@ const Footer = () => {
                                         AL-MOAZZEN <span className="text-gold-premium">GROUP</span>
                                     </h2>
                                     <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">
-                                        Spirituality & Excellence
+                                        {t('footer.tagline')}
                                     </p>
                                 </div>
                             </div>
                         </Link>
 
                         <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-                            Delivering spiritually enriching and professionally managed Umrah journeys from the heart of Jeddah.
+                            {t('footer.brandDesc')}
                         </p>
 
                         <div className="flex items-center gap-4">
@@ -95,7 +95,7 @@ const Footer = () => {
                                 { icon: <Facebook size={18} />, label: "Facebook" },
                                 { icon: <Instagram size={18} />, label: "Instagram" },
                                 { icon: <Twitter size={18} />, label: "Twitter" },
-                                { icon: <MessageSquare size={18} />, label: "WhatsApp" }
+                                { icon: <MessageSquare size={18} />, label: t('footer.whatsapp') }
                             ].map((social, idx) => (
                                 <a
                                     key={idx}
@@ -112,14 +112,14 @@ const Footer = () => {
                     {/* Column 2: Our Services */}
                     <motion.div variants={itemVariants}>
                         <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
-                            Our Services
-                            <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gold-premium" />
+                            {t('nav.services')}
+                            <div className="absolute -bottom-2 left-0 rtl:left-auto rtl:right-0 w-12 h-0.5 bg-gold-premium" />
                         </h4>
                         <ul className="space-y-4">
                             {footerSections.services.map((service, idx) => (
                                 <li key={idx}>
                                     <Link to="/services" className="footer-link-premium group">
-                                        <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-gold-premium" />
+                                        <ArrowRight size={14} className="opacity-0 -ml-4 rtl:ml-0 rtl:-mr-4 group-hover:opacity-100 group-hover:ml-0 rtl:group-hover:mr-0 transition-all duration-300 text-gold-premium" />
                                         {service}
                                     </Link>
                                 </li>
@@ -130,8 +130,8 @@ const Footer = () => {
                     {/* Column 3: Quick Links */}
                     <motion.div variants={itemVariants}>
                         <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
-                            Quick Links
-                            <div className="absolute -bottom-2 left-0 w-12 h-0.5 bg-gold-premium" />
+                            {t('nav.quickLinks')}
+                            <div className="absolute -bottom-2 left-0 rtl:left-auto rtl:right-0 w-12 h-0.5 bg-gold-premium" />
                         </h4>
                         <ul className="space-y-4">
                             {footerSections.links.map((link, idx) => (
@@ -147,12 +147,12 @@ const Footer = () => {
                     {/* Column 4: Contact & Newsletter */}
                     <motion.div variants={itemVariants} className="space-y-8">
                         <div>
-                            <h4 className="text-lg font-bold mb-6 text-gold-premium">Contact Information</h4>
+                            <h4 className="text-lg font-bold mb-6 text-gold-premium">{t('footer.contactInfo')}</h4>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3 group">
                                     <MapPin size={18} className="text-gold-premium mt-1 shrink-0 group-hover:scale-110 transition-transform" />
                                     <span className="text-gray-400 text-sm leading-relaxed">
-                                        King Abdullah Road, Jeddah,<br />Saudi Arabia
+                                        {t('footer.address')}
                                     </span>
                                 </li>
                                 <li className="flex items-center gap-3 group">
@@ -167,13 +167,13 @@ const Footer = () => {
                         </div>
 
                         <div className="pt-4">
-                            <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-4">Available 24/7 for Assistance</p>
+                            <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-4">{t('footer.support')}</p>
                             <a
                                 href="#"
                                 className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-gold-premium text-gold-premium hover:bg-gold-premium hover:text-white transition-all duration-500 group"
                             >
                                 <MessageSquare size={16} />
-                                <span className="text-sm font-semibold">WhatsApp Support</span>
+                                <span className="text-sm font-semibold">{t('footer.whatsapp')}</span>
                             </a>
                         </div>
                     </motion.div>
@@ -181,16 +181,16 @@ const Footer = () => {
 
 
                 {/* Copyright Section */}
-                <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 relative">
                     <p className="text-gray-500 text-sm">
-                        © {currentYear} <span className="text-gray-300">AL-MOAZZEN GROUP</span>. All Rights Reserved.
+                        {t('footer.copy', { year: currentYear })}
                     </p>
                     <div className="flex items-center gap-2 text-xs text-gray-500">
                         <div className="w-1 h-1 bg-gold-premium rounded-full" />
-                        Designed with Excellence in Saudi Arabia
+                        {t('footer.crafted')}
                     </div>
                     {/* Subtle Kaaba Watermark at bottom right */}
-                    <div className="absolute bottom-4 right-4 opacity-[0.03] pointer-events-none grayscale hidden lg:block select-none">
+                    <div className="absolute bottom-4 right-4 rtl:left-4 rtl:right-auto opacity-[0.03] pointer-events-none grayscale hidden lg:block select-none">
                         <img
                             src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=400&auto=format&fit=crop"
                             alt="Kaaba Silhouette"

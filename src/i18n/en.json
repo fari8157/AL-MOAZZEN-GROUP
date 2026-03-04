@@ -2,16 +2,76 @@
     "nav": {
         "home": "Home",
         "about": "About Us",
-        "services": "Services",
+        "services": "Our Services",
         "packages": "Packages",
         "blog": "Blog",
         "contact": "Contact Us",
-        "faq": "FAQ"
+        "faq": "FAQ",
+        "quickLinks": "Quick Links",
+        "brand": "AL-MOAZZEN GROUP"
     },
     "hero": {
+        "agency": "AL-MOAZZEN GROUP Official Agency in Jeddah",
         "title": "Experience the Sacred Journey with Excellence",
         "subtitle": "Premium Umrah packages tailored for your spiritual comfort and peace of mind.",
         "cta": "Explore Packages"
+    },
+    "home": {
+        "whyChoose": {
+            "title": "Why Choose AL-MOAZZEN GROUP?",
+            "subtitle": "Delivering a spiritually enriching and seamlessly managed Umrah experience with excellence, care, and dedication.",
+            "card1": {
+                "title": "Seamless Travel Management",
+                "desc": "From flight booking to ground transportation, every detail is carefully arranged for a smooth journey."
+            },
+            "card2": {
+                "title": "Premium Accommodation",
+                "desc": "Stay in carefully selected hotels within close proximity to Masjid Al-Haram for maximum convenience."
+            },
+            "card3": {
+                "title": "Expert Religious Guidance",
+                "desc": "Experienced guides assist you through every ritual of Umrah, ensuring clarity and spiritual fulfillment."
+            },
+            "card4": {
+                "title": "Dedicated 24/7 Support",
+                "desc": "Our support team remains available throughout your journey to provide assistance whenever needed."
+            }
+        },
+        "umrahJourney": {
+            "title": "Your Umrah Journey – Step by Step",
+            "subtitle": "A carefully guided process designed to let you focus entirely on your worship.",
+            "step1": {
+                "title": "Select Your Package",
+                "desc": "Choose from our thoughtfully designed Umrah packages tailored to your comfort and schedule."
+            },
+            "step2": {
+                "title": "Visa & Documentation",
+                "desc": "We handle all necessary documentation and visa procedures efficiently and professionally."
+            },
+            "step3": {
+                "title": "Arrival & Hospitality",
+                "desc": "Enjoy VIP reception, smooth transfers, and comfortable hotel check-in near the Haram."
+            },
+            "step4": {
+                "title": "Perform Umrah",
+                "desc": "Complete your sacred rituals with the support of knowledgeable guides for a fulfilling experience."
+            }
+        }
+    },
+    "footer": {
+        "brandDesc": "Delivering spiritually enriching and professionally managed Umrah journeys from the heart of Jeddah.",
+        "tagline": "Spirituality & Excellence",
+        "contactInfo": "Contact Information",
+        "address": "King Abdullah Road, Jeddah, Saudi Arabia",
+        "support": "Available 24/7 for Assistance",
+        "whatsapp": "WhatsApp Support",
+        "copy": "© {{year}} AL-MOAZZEN GROUP. All rights reserved.",
+        "crafted": "Designed with Excellence in Saudi Arabia",
+        "vip": "VIP & Private Services",
+        "visa": "Umrah Visa Processing",
+        "hotelTrans": "Hotel & Transport Arrangements",
+        "privacy": "Privacy Policy",
+        "terms": "Terms & Conditions"
     },
     "common": {
         "learnMore": "Learn More",
@@ -20,7 +80,172 @@
         "success": "Success",
         "error": "Error"
     },
-    "footer": {
-        "copy": "© {{year}} AL-MOAZZEN GROUP. All rights reserved."
+    "about": {
+        "title": "AL-MOAZZEN GROUP: Serving Pilgrims Since 2010",
+        "desc1": "Based in Jeddah, AL-MOAZZEN GROUP is at the gateway of the two Holy Cities. Our mission is to facilitate a seamless, spiritual, and comfortable Umrah experience for every pilgrim.",
+        "desc2": "We understand the profound significance of this journey. That's why we combine local expertise with international hospitality standards to serve our clients from around the globe.",
+        "stats": {
+            "pilgrims": "20k+",
+            "pilgrimsLabel": "Pilgrims Served",
+            "experience": "16+",
+            "experienceLabel": "Years Experience"
+        },
+        "mission": {
+            "title": "Our Mission",
+            "desc": "To provide accessible, high-quality Umrah services that prioritize the spiritual peace of our guests."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "desc": "To be the most trusted name in spiritual travel, known for our integrity and excellence in service."
+        },
+        "values": {
+            "title": "Our Values",
+            "desc": "Honesty, spiritual respect, and unwavering commitment to pilgrim comfort and safety."
+        }
+    },
+    "services": {
+        "title": "Our Specialized Services",
+        "subtitle": "Beyond packages, we provide everything needed for a complete spiritual journey.",
+        "card1": {
+            "title": "Visa Processing",
+            "desc": "Comprehensive visa assistance for pilgrims worldwide with fast turnaround times."
+        },
+        "card2": {
+            "title": "Guided Tours",
+            "desc": "Ziyarat tours in Makkah and Madinah with knowledgeable multilingual guides."
+        },
+        "card3": {
+            "title": "Group Packages",
+            "desc": "Coordinated travel for families and large groups with dedicated support staff."
+        },
+        "card4": {
+            "title": "24/7 Support",
+            "desc": "In-country support team available around the clock to assist with any needs."
+        },
+        "vipTitle": "Customized VIP Experiences",
+        "vipDesc": "Looking for something tailored to your specific needs? We offer private transportation, luxury suite bookings, and personalized guidance for individuals and VIP groups.",
+        "inquire": "Inquire Now"
+    },
+    "packages": {
+        "title": "Our Umrah Packages",
+        "subtitle": "Select a package that fits your needs and budget. All packages include standard services.",
+        "economy": "Economy Umrah",
+        "premium": "Premium Umrah",
+        "vipRoyal": "VIP Royal Umrah",
+        "perPerson": "/ person",
+        "mostPopular": "Most Popular",
+        "bookInquiry": "Book Inquiry",
+        "hotels": {
+            "economy": "3 Star Hotel (600m from Haram)",
+            "premium": "4 Star Hotel (300m from Haram)",
+            "vip": "5 Star Luxury (Clock Tower)"
+        },
+        "includes": {
+            "visa": "Visa",
+            "economyFlight": "Economy Flight",
+            "sharedTransport": "Shared Transport",
+            "economyPlusFlight": "Economy Plus Flight",
+            "privateTransport": "Private Transport",
+            "ziyarat": "Ziyarat",
+            "businessFlight": "Business Class",
+            "luxurySUV": "Luxury Private SUV",
+            "privateGuide": "Private Guide"
+        }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find answers to common questions about our services and the Umrah journey.",
+        "q1": "When is the best time to perform Umrah?",
+        "a1": "While Umrah can be performed year-round, many prefer the months of October to March when the weather in Saudi Arabia is milder. Ramadan is also a highly spiritual time, though it is much more crowded.",
+        "q2": "How long does the Umrah visa process take?",
+        "a2": "Typically, Umrah visas are processed within 3 to 7 working days. We recommend booking at least 2-3 weeks in advance to ensure all documentation is in order.",
+        "q3": "Are flights included in the packages?",
+        "a3": "Our Premium and VIP packages include return flights. Economy packages can be customized to include flights or can be 'land-only' if you prefer to book your own travel.",
+        "q4": "Do you provide Ziyarat (Holy sites) tours?",
+        "a4": "Yes, all our packages include guided tours of major historical and religious sites in both Makkah and Madinah.",
+        "q5": "Is travel insurance necessary?",
+        "a5": "Standard Saudi health insurance is often included with the visa fee, but we highly recommend additional comprehensive travel insurance for peace of mind."
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "subtitle": "Have questions? Our team in Jeddah is ready to assist you in planning your spiritual journey.",
+        "info": {
+            "title": "Contact Information",
+            "office": "Our Office",
+            "address": "King Abdullah Road, Suite 402, Jeddah, KSA",
+            "phone": "Phone Number",
+            "email": "Email Address"
+        },
+        "form": {
+            "name": "Full Name",
+            "phone": "Phone Number",
+            "email": "Email Address",
+            "package": "Interested Package",
+            "message": "Your Message",
+            "placeholder": {
+                "name": "John Doe",
+                "phone": "+966",
+                "email": "john@example.com",
+                "message": "Tell us more about your requirements..."
+            },
+            "submit": "Send Inquiry",
+            "sending": "Sending...",
+            "success": "Message Sent!",
+            "successDesc": "Thank you for your inquiry. Our team will contact you shortly.",
+            "another": "Send Another Message",
+            "error": "Something went wrong. Please try again."
+        },
+        "options": {
+            "economy": "Economy",
+            "premium": "Premium",
+            "vip": "VIP Royal",
+            "custom": "Custom Package"
+        }
+    },
+    "blog": {
+        "title": "Our Blog",
+        "subtitle": "Explore articles on Umrah rituals, travel tips, and spiritual preparations.",
+        "readArticle": "Read Article",
+        "backToBlog": "Back to Blog",
+        "inquireUmrah": "Inquire About Umrah",
+        "meta": {
+            "title": "Umrah Travel Blog | Spiritual Insights by AL-MOAZZEN GROUP",
+            "desc": "Read our latest articles on Umrah rituals, travel tips, and spiritual guidance to prepare for your sacred journey."
+        }
+    },
+    "legal": {
+        "privacy": {
+            "title": "Privacy Policy",
+            "updated": "Last updated: March 2026",
+            "intro": {
+                "title": "Introduction",
+                "desc": "We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website."
+            },
+            "data": {
+                "title": "Data We Collect",
+                "desc": "We may collect, use, store and transfer different kinds of personal data about you, including Identity Data (name), Contact Data (email, phone), and Technical Data (IP address, browser type)."
+            }
+        },
+        "terms": {
+            "title": "Terms and Conditions",
+            "mainDesc": "By using the services of AL-MOAZZEN GROUP, you agree to the following terms and conditions...",
+            "section1": {
+                "title": "1. Booking & Cancellation",
+                "desc": "Details regarding booking and cancellation of Umrah packages with AL-MOAZZEN GROUP."
+            },
+            "section2": {
+                "title": "2. Agreement to Terms",
+                "desc": "By accessing our website, you agree to be bound by these Terms and Conditions and all applicable laws and regulations."
+            },
+            "section3": {
+                "title": "3. Use of Services",
+                "desc": "Our services are provided for the purpose of facilitating Umrah travel. Users are responsible for providing accurate information for visa processing and bookings."
+            }
+        }
+    },
+    "ui": {
+        "whatsappLabel": "Chat on WhatsApp",
+        "whatsappText": "Chat with us",
+        "whatsappMsg": "Hello! I'm interested in your Umrah packages."
     }
 }
