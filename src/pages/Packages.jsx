@@ -1,5 +1,4 @@
-// src/pages/Packages.jsx
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import {
@@ -144,9 +143,8 @@ const Car = ({ size }) => (
 
 /* ════════════════════════════════════════ */
 const Packages = () => {
-  const { t } = useTranslation();
+  useTranslation();
   const heroRef = useRef(null);
-  const [openFaq, setOpenFaq] = useState(null);
 
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
   const heroBgY     = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);

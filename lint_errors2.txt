@@ -1,0 +1,74 @@
+
+> travel-agency@0.0.0 lint
+> eslint .
+
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\layout\Navbar.jsx
+  292:21  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  290 |
+  291 |   useEffect(() => {
+> 292 |     if (drawerOpen) setDrawerOpen(false);
+      |                     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  293 |   }, [location.pathname, drawerOpen]);
+  294 |
+  295 |   useEffect(() => {  react-hooks/set-state-in-effect
+  315:6   warning  React Hook useEffect has a missing dependency: 'calcIndicator'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          react-hooks/exhaustive-deps
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\ui\shared.jsx
+  13:15  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  11 |   const particles = React.useMemo(() => Array.from({ length: count }, (_, i) => ({
+  12 |     id: i,
+> 13 |     size:     Math.random() * 4 + 2,
+     |               ^^^^^^^^^^^^^ Cannot call impure function
+  14 |     left:     Math.random() * 100,
+  15 |     delay:    Math.random() * 8,
+  16 |     duration: Math.random() * 10 + 8,  react-hooks/purity
+  14:15  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  12 |     id: i,
+  13 |     size:     Math.random() * 4 + 2,
+> 14 |     left:     Math.random() * 100,
+     |               ^^^^^^^^^^^^^ Cannot call impure function
+  15 |     delay:    Math.random() * 8,
+  16 |     duration: Math.random() * 10 + 8,
+  17 |     shape:    i % 3 === 0 ? '???' : i % 3 === 1 ? '???' : '???',                          react-hooks/purity
+  15:15  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  13 |     size:     Math.random() * 4 + 2,
+  14 |     left:     Math.random() * 100,
+> 15 |     delay:    Math.random() * 8,
+     |               ^^^^^^^^^^^^^ Cannot call impure function
+  16 |     duration: Math.random() * 10 + 8,
+  17 |     shape:    i % 3 === 0 ? '???' : i % 3 === 1 ? '???' : '???',
+  18 |   })), [count]);                    react-hooks/purity
+  16:15  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  14 |     left:     Math.random() * 100,
+  15 |     delay:    Math.random() * 8,
+> 16 |     duration: Math.random() * 10 + 8,
+     |               ^^^^^^^^^^^^^ Cannot call impure function
+  17 |     shape:    i % 3 === 0 ? '???' : i % 3 === 1 ? '???' : '???',
+  18 |   })), [count]);
+  19 |                                                         react-hooks/purity
+
+C:\Users\User\Desktop\faris\travel-agency\src\pages\Packages.jsx
+  2:25  error  'useState' is defined but never used. Allowed unused vars must match /^(?:[A-Z_]|motion)/u  no-unused-vars
+
+??? 7 problems (6 errors, 1 warning)
+

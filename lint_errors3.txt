@@ -1,0 +1,27 @@
+
+> travel-agency@0.0.0 lint
+> eslint .
+
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\layout\Navbar.jsx
+  318:6  warning  React Hook useEffect has a missing dependency: 'calcIndicator'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\User\Desktop\faris\travel-agency\src\components\ui\shared.jsx
+  14:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  12 |
+  13 |   useEffect(() => {
+> 14 |     setParticles(Array.from({ length: count }, (_, i) => ({
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  15 |       id: i,
+  16 |       size:     Math.random() * 4 + 2,
+  17 |       left:     Math.random() * 100,  react-hooks/set-state-in-effect
+
+??? 2 problems (1 error, 1 warning)
+

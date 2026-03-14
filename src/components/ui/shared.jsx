@@ -8,14 +8,21 @@ import { useInView } from 'framer-motion';
    Floating gold particles (used on dark sections)
 ───────────────────────────────────────────── */
 export const Particles = ({ count = 12 }) => {
-  const particles = Array.from({ length: count }, (_, i) => ({
-    id: i,
-    size:     Math.random() * 4 + 2,
-    left:     Math.random() * 100,
-    delay:    Math.random() * 8,
-    duration: Math.random() * 10 + 8,
-    shape:    i % 3 === 0 ? '✦' : i % 3 === 1 ? '◆' : '●',
-  }));
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setParticles(Array.from({ length: count }, (_, i) => ({
+        id: i,
+        size:     Math.random() * 4 + 2,
+        left:     Math.random() * 100,
+        delay:    Math.random() * 8,
+        duration: Math.random() * 10 + 8,
+        shape:    i % 3 === 0 ? '✦' : i % 3 === 1 ? '◆' : '●',
+      })));
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [count]);
 
   return (
     <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>

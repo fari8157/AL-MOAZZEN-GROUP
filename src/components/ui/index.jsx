@@ -81,3 +81,4 @@ export const Section = ({
         </section>
     );
 };
+export { default as Loading } from './Loading';

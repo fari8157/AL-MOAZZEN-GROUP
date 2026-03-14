@@ -69,7 +69,7 @@ const HeroSection = () => {
       setWordIdx((i) => (i + 1) % CYCLING_WORDS.length);
     }, 3000);
     return () => clearInterval(id);
-  }, []);
+  }, [CYCLING_WORDS.length]);
 
   return (
     <section className="hero">

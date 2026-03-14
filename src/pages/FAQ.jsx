@@ -97,7 +97,7 @@ const STATS = [
 
 /* ════════════════════════════════════════ */
 const FAQ = () => {
-  const { t } = useTranslation();
+  useTranslation();
   const heroRef = useRef(null);
   const [activeCategory, setActiveCategory] = useState('all');
   const [openIndex, setOpenIndex] = useState(null);

@@ -288,21 +288,24 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', fn);
   }, []);
 
-  useEffect(() => setDrawerOpen(false), [location.pathname]);
+  useEffect(() => {
+    const timer = setTimeout(() => setDrawerOpen(false), 0);
+    return () => clearTimeout(timer);
+  }, [location.pathname]);
 
   useEffect(() => {
     document.body.style.overflow = drawerOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [drawerOpen]);
 
-  const calcIndicator = () => {
+  const calcIndicator = React.useCallback(() => {
     const el   = linkRefs.current[location.pathname];
     const pill = pillRef.current;
     if (!el || !pill) return;
     const pR = pill.getBoundingClientRect();
     const lR = el.getBoundingClientRect();
     setIndicator({ left:lR.left-pR.left, top:lR.top-pR.top, width:lR.width, height:lR.height });
-  };
+  }, [location.pathname]);
 
   useEffect(() => {
     const t1 = setTimeout(calcIndicator, 0);
@@ -310,7 +313,7 @@ const Navbar = () => {
     const t3 = setTimeout(calcIndicator, 400);
     if (document.fonts) document.fonts.ready.then(calcIndicator);
     return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3); };
-  }, [location.pathname, scrolled]);
+  }, [location.pathname, scrolled, calcIndicator]);
 
   const isActive   = p => p === '/' ? location.pathname === '/' : location.pathname.startsWith(p);
   const toggleLang = () => i18n.changeLanguage(i18n.language === 'en' ? 'ar' : 'en');

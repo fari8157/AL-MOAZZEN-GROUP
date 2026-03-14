@@ -129,7 +129,7 @@ const STATS = [
 
 /* ════════════════════════════════════════ */
 const Services = () => {
-  const { t } = useTranslation();
+  useTranslation();
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
   const heroBgY     = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);

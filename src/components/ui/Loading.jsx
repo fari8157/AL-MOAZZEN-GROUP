@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const LoadingScreen = ({ onComplete }) => {
+const Loading = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -260,4 +260,4 @@ const LoadingScreen = ({ onComplete }) => {
   );
 };
 
-export default LoadingScreen;
+export default Loading;

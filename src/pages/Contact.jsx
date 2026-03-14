@@ -1,6 +1,4 @@
-// src/pages/Contact.jsx
 import React, { useState, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import {
   Mail, Phone, MapPin, Send, CheckCircle,
