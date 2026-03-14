@@ -18,44 +18,96 @@
     },
     "home": {
         "whyChoose": {
-            "title": "Why Choose AL-MOAZZEN GROUP?",
-            "subtitle": "Delivering a spiritually enriching and seamlessly managed Umrah experience with excellence, care, and dedication.",
+            "badge": "Why Choose Al-Moazzen Group",
+            "titleStart": "Your Trusted Partner",
+            "titleEnd": "For a Blessed Umrah Journey",
+            "subtitle": "With years of experience serving thousands of pilgrims, we ensure every step of your Umrah journey is smooth, comfortable, and spiritually fulfilling.",
             "card1": {
-                "title": "Seamless Travel Management",
-                "desc": "From flight booking to ground transportation, every detail is carefully arranged for a smooth journey."
+                "title": "Easy Travel Arrangements",
+                "desc": "We handle flights, visa processing, and transport so your Umrah journey begins with complete peace of mind."
             },
             "card2": {
-                "title": "Premium Accommodation",
-                "desc": "Stay in carefully selected hotels within close proximity to Masjid Al-Haram for maximum convenience."
+                "title": "Premium Hotel Accommodation",
+                "desc": "Stay in carefully selected hotels near the Haram, ensuring comfort, convenience, and spiritual focus."
             },
             "card3": {
-                "title": "Expert Religious Guidance",
-                "desc": "Experienced guides assist you through every ritual of Umrah, ensuring clarity and spiritual fulfillment."
+                "title": "Trusted & Reliable Service",
+                "desc": "With years of experience guiding pilgrims, we provide a safe, transparent, and well-organized Umrah experience."
             },
             "card4": {
-                "title": "Dedicated 24/7 Support",
-                "desc": "Our support team remains available throughout your journey to provide assistance whenever needed."
+                "title": "24/7 Pilgrim Support",
+                "desc": "Our dedicated support team is available around the clock to assist you throughout your journey."
             }
         },
         "umrahJourney": {
-            "title": "Your Umrah Journey – Step by Step",
-            "subtitle": "A carefully guided process designed to let you focus entirely on your worship.",
+            "badge": "Your Sacred Journey",
+            "titleStart": "Your Umrah Journey",
+            "titleEnd": "Step by Step",
+            "subtitle": "From planning your travel to completing your blessed pilgrimage, our team ensures every step of your Umrah journey is smooth, organized, and spiritually fulfilling.",
+            "stepLabel": "Step",
             "step1": {
-                "title": "Select Your Package",
-                "desc": "Choose from our thoughtfully designed Umrah packages tailored to your comfort and schedule."
+                "title": "Choose Your Package",
+                "desc": "Select the Umrah package that best suits your travel needs, dates, and preferences."
             },
             "step2": {
                 "title": "Visa & Documentation",
-                "desc": "We handle all necessary documentation and visa procedures efficiently and professionally."
+                "desc": "We assist you with Umrah visa processing and all necessary travel documentation."
             },
             "step3": {
-                "title": "Arrival & Hospitality",
-                "desc": "Enjoy VIP reception, smooth transfers, and comfortable hotel check-in near the Haram."
+                "title": "Travel & Accommodation",
+                "desc": "Enjoy comfortable flights and carefully selected hotels close to the Haram."
             },
             "step4": {
-                "title": "Perform Umrah",
-                "desc": "Complete your sacred rituals with the support of knowledgeable guides for a fulfilling experience."
+                "title": "Complete Your Umrah",
+                "desc": "Perform your sacred pilgrimage with peace of mind and full support from our team."
             }
+        },
+        "hero": {
+            "label": "Al-Moazzen Group — Jeddah, Saudi Arabia",
+            "titleStart": "Begin Your",
+            "titleEnd": "Umrah Journey",
+            "arabicLine": "لَبَّيْكَ اللَّهُمَّ لَبَّيْك",
+            "subtitle": "Experience the blessed pilgrimage with peace and comfort. Al-Moazzen Group handles every detail so you can focus on devotion and your spiritual journey.",
+            "planBtn": "Plan My Umrah",
+            "viewBtn": "View Packages",
+            "scroll": "Scroll",
+            "cyclingWords": [
+                "Sacred",
+                "Blessed",
+                "Divine",
+                "Spiritual",
+                "Holy"
+            ]
+        },
+        "testimonials": {
+            "badge": "Pilgrim Stories",
+            "title": "Words from Our Blessed Pilgrims",
+            "reviews": [
+                {
+                    "name": "Ahmed M.",
+                    "role": "Guest",
+                    "review": "An incredibly well-organized trip. The team handled everything flawlessly."
+                },
+                {
+                    "name": "Fatima K.",
+                    "role": "Guest",
+                    "review": "Their 24/7 support made me feel very safe. Highly recommend Al-Moazzen."
+                },
+                {
+                    "name": "Zayed A.",
+                    "role": "Guest",
+                    "review": "The hotel proximity to the Haram was excellent. Truly a royal experience."
+                }
+            ]
+        },
+        "packages": {
+            "label": "Curated Packages",
+            "titleStart": "Choose Your Sacred",
+            "titleEnd": "Pilgrimage Experience",
+            "currency": "SAR",
+            "perPerson": "/ person",
+            "days": "Days",
+            "bookBtn": "Book This Package"
         }
     },
     "footer": {
@@ -85,10 +137,10 @@
         "desc1": "Based in Jeddah, AL-MOAZZEN GROUP is at the gateway of the two Holy Cities. Our mission is to facilitate a seamless, spiritual, and comfortable Umrah experience for every pilgrim.",
         "desc2": "We understand the profound significance of this journey. That's why we combine local expertise with international hospitality standards to serve our clients from around the globe.",
         "stats": {
-            "pilgrims": "20k+",
             "pilgrimsLabel": "Pilgrims Served",
-            "experience": "16+",
-            "experienceLabel": "Years Experience"
+            "experienceLabel": "Years History",
+            "languagesLabel": "Languages Spoken",
+            "satisfactionLabel": "Success Rate"
         },
         "mission": {
             "title": "Our Mission",
@@ -101,6 +153,55 @@
         "values": {
             "title": "Our Values",
             "desc": "Honesty, spiritual respect, and unwavering commitment to pilgrim comfort and safety."
+        },
+        "hero": {
+            "badge": "ESTABLISHED 2008",
+            "titleStart": "Champions of the",
+            "titleEnd": "Sacred Journey",
+            "subtitle": "Serving pilgrims from Jeddah to the Holy Land with unwavering devotion and elite hospitality for over 15 years."
+        },
+        "who": {
+            "badge": "Traditional Values • Modern Service",
+            "title": "A Legacy of Sacred Hospitality",
+            "desc1": "Founded in the heart of Jeddah, Al-Moazzen Group was born from a singular vision: to treat every pilgrim as a guest of Allah, deserving of the most dignified and seamless travel experience.",
+            "desc2": "Our name — Al-Moazzen — means \"the one who calls to prayer.\" It is a name we wear with honour, reminding us daily of our sacred responsibility to those who answer that call and journey to Makkah and Madinah.",
+            "bullets": [
+                "Fully licensed by the Saudi Ministry of Haj & Umrah",
+                "Dedicated multilingual support in 12+ languages",
+                "Partnerships with top 5-star hotels near Haram",
+                "Seamless visa processing with 99% approval rate"
+            ]
+        },
+        "foundation": {
+            "badge": "Our Foundation",
+            "titleStart": "Mission, Vision &",
+            "titleEnd": "Core Values",
+            "cards": [
+                {
+                    "icon": "🕋",
+                    "label": "Our Mission",
+                    "title": "Serve Every Pilgrim",
+                    "desc": "To provide every Muslim with a spiritually enriching, safe, and seamless Umrah experience — regardless of budget or background."
+                },
+                {
+                    "icon": "🌙",
+                    "label": "Our Vision",
+                    "title": "Global Devotion",
+                    "desc": "To become the gold standard of spiritual travel, bridging the distance between the ummah and the Holy Sanctuaries with elite care."
+                },
+                {
+                    "icon": "📜",
+                    "label": "Our Values",
+                    "title": "Amanah & Ihsan",
+                    "desc": "We operate on trust (Amanah) and strive for excellence (Ihsan) in every detail of your journey, from visa to final Tawaf."
+                }
+            ]
+        },
+        "cta": {
+            "title": "Ready to Answer the Call?",
+            "subtitle": "Join thousands of blessed pilgrims who have entrusted their sacred journey to Al-Moazzen Group. Let us handle the details while you focus on devotion.",
+            "primaryBtn": "Explore Packages",
+            "secondaryBtn": "Contact Us"
         }
     },
     "services": {
@@ -124,7 +225,91 @@
         },
         "vipTitle": "Customized VIP Experiences",
         "vipDesc": "Looking for something tailored to your specific needs? We offer private transportation, luxury suite bookings, and personalized guidance for individuals and VIP groups.",
-        "inquire": "Inquire Now"
+        "inquire": "Inquire Now",
+        "hero": {
+            "badge": "✦ Our Services ✦",
+            "titleStart": "Elevating Your",
+            "titleEnd": "Sacred Experience",
+            "subtitle": "Beyond travel arrangements, we provide a foundation of peace, spiritual guidance, and premium hospitality for your pilgrimage."
+        },
+        "core": {
+            "title": "Comprehensive Pilgrimage Support"
+        },
+        "list": [
+            {
+                "icon": "🛡️",
+                "title": "Visa Processing",
+                "desc": "Swift and reliable Umrah visa handling with a near-perfect approval rate for pilgrims worldwide."
+            },
+            {
+                "icon": "📍",
+                "title": "Elite Transport",
+                "desc": "Private air-conditioned fleet ranging from luxury sedans to spiritual group coaches with professional drivers."
+            },
+            {
+                "icon": "🧭",
+                "title": "Spiritual Guides",
+                "desc": "Knowledgeable multilingual Mutawwifs to guide you through every ritual of your Umrah with proper Sunnah."
+            },
+            {
+                "icon": "🕒",
+                "title": "24/7 Assistance",
+                "desc": "Our dedicated on-ground team in Jeddah, Makkah, and Madinah is always just a call away for any need."
+            },
+            {
+                "icon": "☕",
+                "title": "Premium Dining",
+                "desc": "Carefully curated Halal dining options, from traditional local cuisine to international gourmet buffets."
+            },
+            {
+                "icon": "⭐",
+                "title": "Special Ziyarat",
+                "desc": "Guided historical tours to sacred sites in Al-Madinah and Al-Makkah with profound historical insights."
+            }
+        ],
+        "vip": {
+            "badge": "Royal Experience",
+            "titleStart": "VIP & Bespoke",
+            "titleEnd": "Services",
+            "subtitle": "For those seeking ultimate privacy, luxury, and personalized attention during their sacred journey.",
+            "perks": [
+                "Dedicated personal Mutawwif",
+                "Royal Suite accommodation",
+                "Private 24/7 Chauffeur",
+                "Fast-track scheduling",
+                "Exclusive prayer area access",
+                "Personal Chef & Dining"
+            ],
+            "inquireBtn": "Inquire About VIP"
+        },
+        "process": {
+            "badge": "How It Works",
+            "titleStart": "Simple Steps To",
+            "titleEnd": "Your Pilgrimage",
+            "stepLabel": "STEP"
+        },
+        "steps": [
+            {
+                "num": "01",
+                "title": "Consultation",
+                "desc": "We listen to your needs, dates, and budget — then craft a personalised Umrah plan just for you."
+            },
+            {
+                "num": "02",
+                "title": "Customisation",
+                "desc": "Choose your package tier, accommodation preference, and add-on services to build your perfect journey."
+            },
+            {
+                "num": "03",
+                "title": "Documentation",
+                "desc": "We handle all visa applications, travel documents, and confirmations — you just pack your bags."
+            },
+            {
+                "num": "04",
+                "title": "Your Journey",
+                "desc": "Depart with full confidence knowing every detail is managed. Our team is with you every step of the way."
+            }
+        ]
     },
     "packages": {
         "title": "Our Umrah Packages",
@@ -247,5 +432,164 @@
         "whatsappLabel": "Chat on WhatsApp",
         "whatsappText": "Chat with us",
         "whatsappMsg": "Hello! I'm interested in your Umrah packages."
+    },
+    "packagesPage": {
+        "hero": {
+            "badge": "✦ Curated Packages ✦",
+            "titleStart": "Journeys For",
+            "titleEnd": "Every Pilgrim",
+            "subtitle": "From essential economy options to royal VIP experiences, find the perfect package for your spiritual journey to the Holy Land."
+        },
+        "list": [
+            {
+                "tier": "Silver",
+                "name": "Economy Serenity",
+                "price": "SAR 4,500",
+                "hotelMakkah": "3-Star near Haram",
+                "hotelMadinah": "3-Star near Nabawi",
+                "features": [
+                    "Makkah-Madinah Bus",
+                    "Visa Processing",
+                    "Shared Ziyarat",
+                    "Standard Ihram",
+                    "24/7 Group Support"
+                ]
+            },
+            {
+                "tier": "Gold",
+                "name": "Premium Grace",
+                "price": "SAR 8,200",
+                "popular": true,
+                "hotelMakkah": "5-Star Swissôtel",
+                "hotelMadinah": "5-Star Pullman",
+                "features": [
+                    "Private Sedan Transfer",
+                    "Fast-track Visa",
+                    "Private Ziyarat",
+                    "Full Board Buffet",
+                    "Premium Ihram Kit"
+                ]
+            },
+            {
+                "tier": "Platinum",
+                "name": "Royal Devotion",
+                "price": "SAR 15,500",
+                "hotelMakkah": "Fairmont / Raffles",
+                "hotelMadinah": "Oberoi Madinah",
+                "features": [
+                    "VIP Airport Meet & Greet",
+                    "Luxury SUV 24/7",
+                    "Private Scholar Guide",
+                    "Personal Chef Access",
+                    "Zamzam Delivery"
+                ]
+            }
+        ],
+        "alwaysIncluded": {
+            "badge": "Standard Offerings",
+            "titleStart": "Always",
+            "titleEnd": "Included",
+            "list": [
+                {
+                    "num": "01",
+                    "title": "Umrah Visa Processing",
+                    "desc": "Complete handling of all documentation and visa requirements."
+                },
+                {
+                    "num": "02",
+                    "title": "Airport Transfers",
+                    "desc": "Meet & greet with comfortable transport to your hotel."
+                },
+                {
+                    "num": "03",
+                    "title": "24/7 Ground Support",
+                    "desc": "Our local team remains on-call throughout your entire stay."
+                }
+            ]
+        }
+    },
+    "faqPage": {
+        "hero": {
+            "badge": "Common Enquiries",
+            "titleStart": "How Can We",
+            "titleEnd": "Assist You?",
+            "searchPlaceholder": "Search for a question..."
+        },
+        "stats": {
+            "topics": "Topics Covered",
+            "response": "Avg Response",
+            "resolved": "Queries Resolved"
+        },
+        "faqs": [
+            {
+                "question": "What documents are required for an Umrah visa?",
+                "answer": "You typically need a valid passport (at least 6 months validity), proof of vaccination (if applicable), and a completed application. We handle the entire process and will provide a detailed checklist upon booking."
+            },
+            {
+                "question": "Can women perform Umrah without a Mahram?",
+                "answer": "Yes, according to recent updates from the Saudi Ministry of Haj & Umrah, women of all ages can now perform Umrah without a Mahram."
+            },
+            {
+                "question": "When is the best time to perform Umrah?",
+                "answer": "Umrah can be performed year-round, but the most popular times are during Ramadan and from November to March when the weather is cooler. We offer packages across all seasons."
+            },
+            {
+                "question": "What is included in the premium package?",
+                "answer": "Our premium packages include 5-star hotels near the Haram, private transportation, guided ziyarat tours, fast-track visa processing, and 24/7 dedicated assistance."
+            },
+            {
+                "question": "How close are the hotels to the Masjid Al-Haram?",
+                "answer": "In our premium and VIP packages, we select hotels that are within 50-200 meters of the Masjid Al-Haram, often with direct access to the Haram courtyard."
+            }
+        ],
+        "help": {
+            "title": "Still Have Questions?",
+            "subtitle": "We're here to help you solve any issue. Our experts are available 24/7.",
+            "contacts": [
+                {
+                    "icon": "phone",
+                    "title": "Call Us",
+                    "value": "+966 50 123 4567"
+                },
+                {
+                    "icon": "mail",
+                    "title": "Email Us",
+                    "value": "help@umrahtravel.sa"
+                }
+            ]
+        }
+    },
+    "contactPage": {
+        "hero": {
+            "badge": "Connect With Us",
+            "titleStart": "Speak with Our",
+            "titleEnd": "Pilgrimage Experts",
+            "subtitle": "Whether you have questions about packages, visas, or spiritual guidance, our team is ready to serve you."
+        },
+        "info": {
+            "title": "Our Global Offices",
+            "subtitle": "Visit us in person or reach out through our digital channels. We operate 24/7 to support our pilgrims across all time zones.",
+            "available": "Live Support Available Now"
+        },
+        "form": {
+            "title": "Send a Blessed Enquiry"
+        },
+        "promise": {
+            "title": "Our Response Promise",
+            "steps": [
+                {
+                    "title": "Instant Acknowledgement",
+                    "desc": "You'll receive a confirmation message the moment your enquiry reaches us."
+                },
+                {
+                    "title": "Specialist Assigned",
+                    "desc": "A dedicated pilgrimage specialist is assigned to your enquiry within minutes."
+                },
+                {
+                    "title": "Personalised Proposal",
+                    "desc": "Within 24 hours, you'll receive a tailored Umrah plan with transparent pricing."
+                }
+            ]
+        }
     }
 }

@@ -1,206 +1,284 @@
+// src/components/Footer.jsx
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import {
-    Facebook, Instagram, Twitter, Mail, Phone, MapPin,
-    MessageSquare, Send, ArrowRight, Globe
+  Facebook, Instagram, Twitter, Mail, Phone,
+  MapPin, MessageSquare, ArrowRight,
 } from 'lucide-react';
 
+/* ── animation variants ── */
+const container = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: { duration: 0.8, staggerChildren: 0.1, ease: 'easeOut' },
+  },
+};
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Footer = () => {
-    const { t } = useTranslation();
-    const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
 
-    const footerSections = {
-        services: [
-            t('home.whyChoose.card2.title'),
-            t('home.whyChoose.card1.title'),
-            t('footer.vip'),
-            t('footer.visa'),
-            t('footer.hotelTrans')
-        ],
-        links: [
-            { label: t('nav.about'), path: "/about" },
-            { label: t('nav.packages'), path: "/packages" },
-            { label: t('nav.faq'), path: "/faq" },
-            { label: t('nav.blog'), path: "/blog" },
-            { label: t('footer.privacy'), path: "/privacy" },
-            { label: t('footer.terms'), path: "/terms" }
-        ]
-    };
+  const services = [
+    t('home.whyChoose.card2.title'),
+    t('home.whyChoose.card1.title'),
+    t('footer.vip'),
+    t('footer.visa'),
+    t('footer.hotelTrans'),
+  ];
 
-    const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.8,
-                staggerChildren: 0.1,
-                ease: "easeOut"
-            }
-        }
-    };
+  const quickLinks = [
+    { label: t('nav.about'),    path: '/about'    },
+    { label: t('nav.packages'), path: '/packages' },
+    { label: t('nav.faq'),      path: '/faq'      },
+    { label: t('nav.blog'),     path: '/blog'     },
+    { label: t('footer.privacy'), path: '/privacy' },
+    { label: t('footer.terms'),   path: '/terms'   },
+  ];
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
+  const socials = [
+    { icon: <Facebook size={18} />,    label: 'Facebook'              },
+    { icon: <Instagram size={18} />,   label: 'Instagram'             },
+    { icon: <Twitter size={18} />,     label: 'Twitter'               },
+    { icon: <MessageSquare size={18} />, label: t('footer.whatsapp') },
+  ];
 
-    return (
-        <footer className="relative bg-footer-bg text-white pt-24 pb-12 overflow-hidden">
-            {/* Islamic Pattern Background Overlay */}
-            <div className="absolute inset-0 bg-islamic-pattern opacity-5 pointer-events-none" />
+  /* ── shared style tokens ── */
+  const S = {
+    footer: {
+      position: 'relative',
+      background: '#0a1f14',
+      color: 'white',
+      paddingTop: 96, paddingBottom: 48,
+      overflow: 'hidden',
+    },
+    topBorder: {
+      position: 'absolute', top: 0, left: 0, right: 0, height: 1,
+      background: 'linear-gradient(90deg, transparent, #c8a24d, transparent)',
+    },
+    gridWrap: {
+      maxWidth: 1280, margin: '0 auto', padding: '0 24px',
+      position: 'relative', zIndex: 1,
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+      gap: 48, marginBottom: 64,
+    },
+    colHeading: {
+      fontFamily: 'Cinzel, serif',
+      fontSize: 15, fontWeight: 700, color: 'white',
+      marginBottom: 24, position: 'relative', display: 'inline-block',
+    },
+    underline: {
+      position: 'absolute', bottom: -6, left: 0,
+      width: 36, height: 2,
+      background: '#c8a24d',
+    },
+    footerLink: {
+      display: 'flex', alignItems: 'center', gap: 8,
+      textDecoration: 'none',
+      fontSize: 14, color: '#9ca3af',
+      transition: 'color 0.3s', marginBottom: 12,
+    },
+    socialBtn: {
+      width: 40, height: 40, borderRadius: '50%',
+      border: '1px solid rgba(255,255,255,0.12)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      color: '#9ca3af', cursor: 'pointer',
+      transition: 'all 0.35s', background: 'transparent',
+    },
+    contactRow: {
+      display: 'flex', alignItems: 'flex-start', gap: 12,
+      marginBottom: 16,
+    },
+    waBtn: {
+      display: 'inline-flex', alignItems: 'center', gap: 8,
+      padding: '10px 22px', borderRadius: 50,
+      border: '1px solid rgba(200,162,77,0.4)',
+      color: '#c8a24d', background: 'transparent',
+      fontSize: 13, fontWeight: 600, cursor: 'pointer',
+      fontFamily: 'Cinzel, serif', transition: 'all 0.3s',
+    },
+    copyright: {
+      paddingTop: 32,
+      borderTop: '1px solid rgba(255,255,255,0.07)',
+      display: 'flex', flexWrap: 'wrap',
+      alignItems: 'center', justifyContent: 'space-between', gap: 12,
+    },
+  };
 
-            {/* Decorative Top Border */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-premium to-transparent" />
+  return (
+    <footer style={S.footer} className="islamic-bg">
+      {/* Decorative top border */}
+      <div style={S.topBorder} />
 
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        style={S.gridWrap}
+      >
+        <div style={S.grid}>
+
+          {/* ── Col 1 : Brand ── */}
+          <motion.div variants={item}>
+            <Link to="/" style={{ display: 'inline-flex', alignItems: 'center', gap: 14, textDecoration: 'none', marginBottom: 24 }}>
+              <div style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(200,162,77,0.25)',
+                borderRadius: 12, padding: '6px 8px',
+              }}>
+                <img src="/logo.png" alt="Al-Moazzen Group" style={{ height: 52, width: 'auto' }} />
+              </div>
+              <div>
+                <div style={{ fontFamily: 'Cinzel, serif', fontSize: 16, fontWeight: 700, color: 'white' }}>
+                  AL-MOAZZEN <span style={{ color: '#c8a24d' }}>GROUP</span>
+                </div>
+                <div style={{ fontSize: 10, color: '#6b7280', letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: 3 }}>
+                  {t('footer.tagline')}
+                </div>
+              </div>
+            </Link>
+
+            <p style={{ fontSize: 14, color: '#6b7280', lineHeight: 1.8, marginBottom: 28, maxWidth: 280 }}>
+              {t('footer.brandDesc')}
+            </p>
+
+            {/* Social icons */}
+            <div style={{ display: 'flex', gap: 10 }}>
+              {socials.map((s, idx) => (
+                <motion.a
+                  key={idx} href="#" aria-label={s.label}
+                  whileHover={{ scale: 1.12 }}
+                  style={S.socialBtn}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.background = '#c8a24d';
+                    e.currentTarget.style.borderColor = '#c8a24d';
+                    e.currentTarget.style.color = '#1a1a1a';
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)';
+                    e.currentTarget.style.color = '#9ca3af';
+                  }}
+                >
+                  {s.icon}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* ── Col 2 : Services ── */}
+          <motion.div variants={item}>
+            <h4 style={S.colHeading}>
+              {t('nav.services')}
+              <div style={S.underline} />
+            </h4>
+            <ul style={{ listStyle: 'none' }}>
+              {services.map((svc, idx) => (
+                <li key={idx}>
+                  <Link
+                    to="/services"
+                    style={S.footerLink}
+                    onMouseEnter={e => e.currentTarget.style.color = '#c8a24d'}
+                    onMouseLeave={e => e.currentTarget.style.color = '#9ca3af'}
+                  >
+                    <ArrowRight size={13} style={{ color: '#c8a24d', flexShrink: 0 }} />
+                    {svc}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* ── Col 3 : Quick Links ── */}
+          <motion.div variants={item}>
+            <h4 style={S.colHeading}>
+              {t('nav.quickLinks')}
+              <div style={S.underline} />
+            </h4>
+            <ul style={{ listStyle: 'none' }}>
+              {quickLinks.map((lnk, idx) => (
+                <li key={idx}>
+                  <Link
+                    to={lnk.path}
+                    style={S.footerLink}
+                    onMouseEnter={e => e.currentTarget.style.color = '#c8a24d'}
+                    onMouseLeave={e => e.currentTarget.style.color = '#9ca3af'}
+                  >
+                    <ArrowRight size={13} style={{ color: '#c8a24d', flexShrink: 0 }} />
+                    {lnk.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* ── Col 4 : Contact ── */}
+          <motion.div variants={item}>
+            <h4 style={{ ...S.colHeading, color: '#c8a24d' }}>
+              {t('footer.contactInfo')}
+              <div style={S.underline} />
+            </h4>
+
+            <div style={S.contactRow}>
+              <MapPin size={17} style={{ color: '#c8a24d', flexShrink: 0, marginTop: 2 }} />
+              <span style={{ fontSize: 14, color: '#9ca3af', lineHeight: 1.7 }}>
+                {t('footer.address')}
+              </span>
+            </div>
+
+            <div style={S.contactRow}>
+              <Phone size={17} style={{ color: '#c8a24d', flexShrink: 0 }} />
+              <a href="tel:+966501234567" style={{ fontSize: 14, color: '#9ca3af', textDecoration: 'none' }}>
+                +966 50 123 4567
+              </a>
+            </div>
+
+            <div style={{ ...S.contactRow, marginBottom: 28 }}>
+              <Mail size={17} style={{ color: '#c8a24d', flexShrink: 0 }} />
+              <a href="mailto:info@almoazzengroup.sa" style={{ fontSize: 14, color: '#9ca3af', textDecoration: 'none' }}>
+                info@almoazzengroup.sa
+              </a>
+            </div>
+
+            <p style={{ fontSize: 10, color: '#4b5563', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 12 }}>
+              {t('footer.support')}
+            </p>
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.04, background: '#c8a24d', color: 'white' }}
+              style={S.waBtn}
             >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
+              <MessageSquare size={15} />
+              {t('footer.whatsapp')}
+            </motion.a>
+          </motion.div>
 
-                    {/* Column 1: Brand Identity */}
-                    <motion.div variants={itemVariants} className="space-y-8">
-                        <Link to="/" className="inline-block group">
-                            <div className="flex items-center gap-4">
-                                <div className="bg-white/95 p-2 rounded-xl border border-gold-premium/30 group-hover:shadow-[0_0_20px_rgba(200,162,77,0.3)] transition-all duration-300">
-                                    <img
-                                        src="/logo.png"
-                                        alt="AL-MOAZZEN GROUP"
-                                        className="h-14 w-auto object-contain"
-                                    />
-                                </div>
-                                <div>
-                                    <h2 className="text-xl font-bold tracking-wider text-white">
-                                        AL-MOAZZEN <span className="text-gold-premium">GROUP</span>
-                                    </h2>
-                                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">
-                                        {t('footer.tagline')}
-                                    </p>
-                                </div>
-                            </div>
-                        </Link>
+        </div>{/* /grid */}
 
-                        <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-                            {t('footer.brandDesc')}
-                        </p>
+        {/* ── Copyright bar ── */}
+        <div style={S.copyright}>
+          <p style={{ fontSize: 13, color: '#4b5563' }}>
+            {t('footer.copy', { year })}
+          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#4b5563' }}>
+            <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c8a24d', display: 'inline-block' }} />
+            {t('footer.crafted')}
+          </div>
+        </div>
 
-                        <div className="flex items-center gap-4">
-                            {[
-                                { icon: <Facebook size={18} />, label: "Facebook" },
-                                { icon: <Instagram size={18} />, label: "Instagram" },
-                                { icon: <Twitter size={18} />, label: "Twitter" },
-                                { icon: <MessageSquare size={18} />, label: t('footer.whatsapp') }
-                            ].map((social, idx) => (
-                                <a
-                                    key={idx}
-                                    href="#"
-                                    className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gold-premium hover:border-gold-premium transition-all duration-500 hover:scale-110"
-                                    aria-label={social.label}
-                                >
-                                    {social.icon}
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
-
-                    {/* Column 2: Our Services */}
-                    <motion.div variants={itemVariants}>
-                        <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
-                            {t('nav.services')}
-                            <div className="absolute -bottom-2 left-0 rtl:left-auto rtl:right-0 w-12 h-0.5 bg-gold-premium" />
-                        </h4>
-                        <ul className="space-y-4">
-                            {footerSections.services.map((service, idx) => (
-                                <li key={idx}>
-                                    <Link to="/services" className="footer-link-premium group">
-                                        <ArrowRight size={14} className="opacity-0 -ml-4 rtl:ml-0 rtl:-mr-4 group-hover:opacity-100 group-hover:ml-0 rtl:group-hover:mr-0 transition-all duration-300 text-gold-premium" />
-                                        {service}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-
-                    {/* Column 3: Quick Links */}
-                    <motion.div variants={itemVariants}>
-                        <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
-                            {t('nav.quickLinks')}
-                            <div className="absolute -bottom-2 left-0 rtl:left-auto rtl:right-0 w-12 h-0.5 bg-gold-premium" />
-                        </h4>
-                        <ul className="space-y-4">
-                            {footerSections.links.map((link, idx) => (
-                                <li key={idx}>
-                                    <Link to={link.path} className="footer-link-premium">
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-
-                    {/* Column 4: Contact & Newsletter */}
-                    <motion.div variants={itemVariants} className="space-y-8">
-                        <div>
-                            <h4 className="text-lg font-bold mb-6 text-gold-premium">{t('footer.contactInfo')}</h4>
-                            <ul className="space-y-4">
-                                <li className="flex items-start gap-3 group">
-                                    <MapPin size={18} className="text-gold-premium mt-1 shrink-0 group-hover:scale-110 transition-transform" />
-                                    <span className="text-gray-400 text-sm leading-relaxed">
-                                        {t('footer.address')}
-                                    </span>
-                                </li>
-                                <li className="flex items-center gap-3 group">
-                                    <Phone size={18} className="text-gold-premium shrink-0 group-hover:rotate-12 transition-transform" />
-                                    <span className="text-gray-400 text-sm group-hover:text-white transition-colors">+966 50 123 4567</span>
-                                </li>
-                                <li className="flex items-center gap-3 group">
-                                    <Mail size={18} className="text-gold-premium shrink-0 group-hover:animate-pulse transition-transform" />
-                                    <span className="text-gray-400 text-sm group-hover:text-white transition-colors">info@almoazzengroup.sa</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="pt-4">
-                            <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-4">{t('footer.support')}</p>
-                            <a
-                                href="#"
-                                className="inline-flex items-center gap-3 px-6 py-2.5 rounded-full border border-gold-premium text-gold-premium hover:bg-gold-premium hover:text-white transition-all duration-500 group"
-                            >
-                                <MessageSquare size={16} />
-                                <span className="text-sm font-semibold">{t('footer.whatsapp')}</span>
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
-
-
-                {/* Copyright Section */}
-                <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 relative">
-                    <p className="text-gray-500 text-sm">
-                        {t('footer.copy', { year: currentYear })}
-                    </p>
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
-                        <div className="w-1 h-1 bg-gold-premium rounded-full" />
-                        {t('footer.crafted')}
-                    </div>
-                    {/* Subtle Kaaba Watermark at bottom right */}
-                    <div className="absolute bottom-4 right-4 rtl:left-4 rtl:right-auto opacity-[0.03] pointer-events-none grayscale hidden lg:block select-none">
-                        <img
-                            src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?q=80&w=400&auto=format&fit=crop"
-                            alt="Kaaba Silhouette"
-                            className="w-48 h-auto"
-                        />
-                    </div>
-                </div>
-            </motion.div>
-        </footer>
-    );
+      </motion.div>
+    </footer>
+  );
 };
 
 export default Footer;

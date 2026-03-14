@@ -13,6 +13,7 @@ import BlogDetails from './pages/BlogDetails';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
+
 function App() {
   const { i18n } = useTranslation();
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ function App() {
         <Route path="/blog/:slug" element={<BlogDetails />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
+        
         <Route path="*" element={<div className="min-h-[60vh] flex flex-col items-center justify-center">
           <h1 className="text-6xl font-bold text-primary-500 mb-4">404</h1>
           <p className="text-xl text-gray-600 mb-8">Page not found</p>
